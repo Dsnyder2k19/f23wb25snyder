@@ -12,6 +12,9 @@ var app = express();
 const booksRouter = require('./routes/books');
 app.use('/books', booksRouter);
 
+const boardRouter = require('./routes/board')
+app.use('/board', boardRouter)
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
